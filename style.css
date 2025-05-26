@@ -126,7 +126,7 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.cimatic-back img {
+.cimatic-back img { /* This will target .displayed-image as well */
   max-width: 100%;
   height: auto;
   border-radius: 5px;
@@ -170,8 +170,8 @@ main {
 }
 
 .feroFox-cont h1 {
-  color: #ff4d4d;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #6cbafa; /* Vibrant light blue */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adjusted text shadow */
   margin-bottom: 1.5rem;
 }
 
