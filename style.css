@@ -114,9 +114,13 @@ main {
 
 .cimatic-back {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+  justify-content: space-around; /* Distribute space around images */
+  gap: 1rem; /* Add gap between images */
+  /* Existing properties below */
+  flex-direction: column; /* This will be overridden by flex-wrap effectively for main axis, but align-items might still be useful depending on desired cross-axis behavior if items don't fill a line */
+  align-items: center; /* Existing: might need adjustment based on flex-wrap behavior */
+  /* justify-content: center; */ /* Replaced by space-around */
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -126,7 +130,9 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.cimatic-back img { /* This will target .displayed-image as well */
+/* Old .cimatic-back img rule is replaced by .cimatic-back .gallery-image */
+/*
+.cimatic-back img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
@@ -136,6 +142,23 @@ main {
 
 .cimatic-back img:hover {
   transform: scale(1.05);
+}
+*/
+
+.cimatic-back .gallery-image {
+  max-width: 100%; /* Make images responsive within their flex items */
+  height: auto;
+  border-radius: 8px; /* Slightly increased border-radius for gallery look */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Add a subtle shadow to each image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+  object-fit: cover; /* Ensure images fill their space well, might crop */
+  flex-basis: 300px; /* Suggest a base width for each image, they can grow/shrink */
+  flex-grow: 1; /* Allow images to grow if space is available */
+}
+
+.cimatic-back .gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Enhance shadow on hover */
 }
 
 .about-me {
