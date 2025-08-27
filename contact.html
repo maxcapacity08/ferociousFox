@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/771e6c66d5.js" crossorigin="anonymous"></script>
+    <!-- Link to main.js if header interactivity (like hamburger) is needed -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+      <button type="button" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      <nav class="mn-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-page-section">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>I'd love to hear from you! Please fill out the form below or reach out through other channels.</p>
+            </div>
+
+            <div class="contact-content-wrapper">
+                <div class="contact-form-container">
+                    <h2>Send a Message</h2>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h2>Contact Information</h2>
+                    <p>You can also reach me directly via:</p>
+                    <ul class="contact-details-list">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:placeholder@example.com">placeholder@example.com</a></li>
+                        <!-- Add phone if desired, e.g., <li><i class="fas fa-phone"></i> +1 234 567 890</li> -->
+                    </ul>
+                    <p>Connect with me on social media:</p>
+                    <div class="social-links-contact">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <!-- Add other social links as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Optional: Add a footer later if desired -->
+
+</body>
+</html>

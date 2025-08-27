@@ -8,9 +8,7 @@
       body {
         margin: 0;
       }
-      canvas {
-        display: block;
-      }
+      /* canvas { display: block; } */ /* Canvas not actively used */
       #container {
         width: 100%;
         height: 100vh;
@@ -23,33 +21,17 @@
         position: absolute;
         top: 10px;
         left: 10px;
-        color: red;
+        color: red; /* Consider changing or removing if not desired for a construction message */
         font-size: 20px;
       }
     </style>
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
-          "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.157.0/examples/jsm/controls/OrbitControls.js"
-        }
-      }
-    </script>
+    <!-- Three.js importmap removed -->
   </head>
   <body>
     <div id="container">
-      <canvas id="scene"></canvas>
-      <div id="message"></div>
+      <!-- <canvas id="scene"></canvas> --> <!-- Canvas element is no longer used -->
+      <div id="message">This page is currently under construction.</div>
     </div>
-    <script type="module">
-      const message = document.getElementById("message");
-
-      // Check WebGL support
-      if (!WebGL2RenderingContext) {
-        message.innerText = "WebGL is not supported on this device.";
-      } else {
-        message.innerText = "WebGL is supported, but the 3D scene was removed.";
-      }
-    </script>
+    <!-- Module script for WebGL check and message update removed -->
   </body>
 </html>
